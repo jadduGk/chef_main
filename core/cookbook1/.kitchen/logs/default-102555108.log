@@ -1,0 +1,64 @@
+I, [2023-04-17T13:15:53.107512 #52992]  INFO -- default-102555108: -----> Converging <default-102555108>...
+W, [2023-04-17T13:15:53.107823 #52992]  WARN -- default-102555108: Running legacy converge for 'Ssh' Driver
+I, [2023-04-17T13:15:53.108118 #52992]  INFO -- default-102555108: Preparing files for transfer
+I, [2023-04-17T13:15:53.108256 #52992]  INFO -- default-102555108: Preparing dna.json
+I, [2023-04-17T13:15:53.108533 #52992]  INFO -- default-102555108: Resolving cookbook dependencies with Berkshelf 8.0.5...
+I, [2023-04-17T13:16:01.738872 #52992]  INFO -- default-102555108: Removing non-cookbook files before transfer
+I, [2023-04-17T13:16:01.739641 #52992]  INFO -- default-102555108: Preparing validation.pem
+I, [2023-04-17T13:16:01.739845 #52992]  INFO -- default-102555108: Preparing client.rb
+I, [2023-04-17T13:16:16.756510 #52992]  INFO -- default-102555108: [SSH] connection failed, retrying in 1 seconds (#<Net::SSH::ConnectionTimeout: Net::SSH::ConnectionTimeout>)
+I, [2023-04-17T13:16:32.773329 #52992]  INFO -- default-102555108: [SSH] connection failed, retrying in 1 seconds (#<Net::SSH::ConnectionTimeout: Net::SSH::ConnectionTimeout>)
+I, [2023-04-17T13:16:48.789691 #52992]  INFO -- default-102555108: [SSH] connection failed, retrying in 1 seconds (#<Net::SSH::ConnectionTimeout: Net::SSH::ConnectionTimeout>)
+I, [2023-04-17T13:17:04.806193 #52992]  INFO -- default-102555108: [SSH] connection failed, retrying in 1 seconds (#<Net::SSH::ConnectionTimeout: Net::SSH::ConnectionTimeout>)
+W, [2023-04-17T13:17:20.822846 #52992]  WARN -- default-102555108: [SSH] connection failed, terminating (#<Net::SSH::ConnectionTimeout: Net::SSH::ConnectionTimeout>)
+E, [2023-04-17T13:17:20.823804 #52992] ERROR -- default-102555108: Converge failed on instance <default-102555108>.
+E, [2023-04-17T13:17:20.824083 #52992] ERROR -- default-102555108: ------Exception-------
+E, [2023-04-17T13:17:20.824104 #52992] ERROR -- default-102555108: Class: Kitchen::ActionFailed
+E, [2023-04-17T13:17:20.824112 #52992] ERROR -- default-102555108: Message: SSH session could not be established
+E, [2023-04-17T13:17:20.824119 #52992] ERROR -- default-102555108: ----------------------
+E, [2023-04-17T13:17:20.824126 #52992] ERROR -- default-102555108: ------Backtrace-------
+E, [2023-04-17T13:17:20.824138 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T13:17:20.824146 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T13:17:20.824152 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T13:17:20.824160 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T13:17:20.824167 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T13:17:20.824174 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T13:17:20.824180 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T13:17:20.824187 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T13:17:20.824194 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T13:17:20.824201 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T13:17:20.824223 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T13:17:20.824231 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T13:17:20.824238 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T13:17:20.824245 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T13:17:20.824254 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T13:17:20.824261 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T13:17:20.824268 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T13:17:20.824278 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T13:17:20.824288 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T13:17:20.824295 #52992] ERROR -- default-102555108: ----End Backtrace-----
+E, [2023-04-17T13:17:20.824302 #52992] ERROR -- default-102555108: ---Nested Exception---
+E, [2023-04-17T13:17:20.824308 #52992] ERROR -- default-102555108: Class: Kitchen::Transport::SshFailed
+E, [2023-04-17T13:17:20.824314 #52992] ERROR -- default-102555108: Message: SSH session could not be established
+E, [2023-04-17T13:17:20.824321 #52992] ERROR -- default-102555108: ----------------------
+E, [2023-04-17T13:17:20.824327 #52992] ERROR -- default-102555108: ------Backtrace-------
+E, [2023-04-17T13:17:20.824333 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T13:17:20.824339 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T13:17:20.824346 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T13:17:20.824353 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T13:17:20.824359 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T13:17:20.824366 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T13:17:20.824372 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T13:17:20.824379 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T13:17:20.824385 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T13:17:20.824395 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T13:17:20.824402 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T13:17:20.824409 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T13:17:20.824419 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T13:17:20.824426 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T13:17:20.824433 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T13:17:20.824440 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T13:17:20.824446 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T13:17:20.824453 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T13:17:20.824460 #52992] ERROR -- default-102555108: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T13:17:20.824467 #52992] ERROR -- default-102555108: ----End Backtrace-----

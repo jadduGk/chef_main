@@ -1,0 +1,8 @@
+---
+sudo: true
+port: 22
+ssh_key: "/home/ubuntu/jaddu_gopi_kp_01.pem"
+username: ubuntu
+hostname: 10.25.55.141
+last_action: create
+last_error: Kitchen::ActionFailed

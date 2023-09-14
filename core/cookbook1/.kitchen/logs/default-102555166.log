@@ -1,0 +1,64 @@
+I, [2023-04-27T11:50:45.993327 #5018]  INFO -- default-102555166: -----> Converging <default-102555166>...
+W, [2023-04-27T11:50:45.993539 #5018]  WARN -- default-102555166: Running legacy converge for 'Ssh' Driver
+I, [2023-04-27T11:50:45.993715 #5018]  INFO -- default-102555166: Preparing files for transfer
+I, [2023-04-27T11:50:45.993785 #5018]  INFO -- default-102555166: Preparing dna.json
+I, [2023-04-27T11:50:45.993965 #5018]  INFO -- default-102555166: Resolving cookbook dependencies with Berkshelf 8.0.5...
+I, [2023-04-27T11:50:53.620790 #5018]  INFO -- default-102555166: Removing non-cookbook files before transfer
+I, [2023-04-27T11:50:53.621583 #5018]  INFO -- default-102555166: Preparing validation.pem
+I, [2023-04-27T11:50:53.621759 #5018]  INFO -- default-102555166: Preparing client.rb
+I, [2023-04-27T11:50:53.983576 #5018]  INFO -- default-102555166: Transferring files to <default-102555166>
+I, [2023-04-27T11:50:54.611457 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/provider.rb:337: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+I, [2023-04-27T11:50:54.611525 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/node_map.rb:58: warning: The called method `set' is defined here
+I, [2023-04-27T11:50:54.617428 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/resource.rb:1379: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+I, [2023-04-27T11:50:54.617467 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/node_map.rb:58: warning: The called method `set' is defined here
+I, [2023-04-27T11:50:54.702360 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/platform/priority_map.rb:36: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+I, [2023-04-27T11:50:54.702430 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/node_map.rb:58: warning: The called method `set' is defined here
+I, [2023-04-27T11:50:54.751783 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/property.rb:546: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+I, [2023-04-27T11:50:54.751859 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/property.rb:121: warning: The called method `initialize' is defined here
+I, [2023-04-27T11:50:55.418623 #5018]  INFO -- default-102555166: Starting Cinc Client, version 15.8.25
+I, [2023-04-27T11:50:58.626804 #5018]  INFO -- default-102555166: resolving cookbooks for run list: ["cookbook1::default"]
+I, [2023-04-27T11:50:58.638653 #5018]  INFO -- default-102555166: Synchronizing Cookbooks:
+I, [2023-04-27T11:50:58.643371 #5018]  INFO -- default-102555166:   - cookbook1 (0.1.1)
+I, [2023-04-27T11:50:58.643561 #5018]  INFO -- default-102555166: Installing Cookbook Gems:
+I, [2023-04-27T11:50:58.644607 #5018]  INFO -- default-102555166: Compiling Cookbooks...
+I, [2023-04-27T11:50:58.649306 #5018]  INFO -- default-102555166: Converging 14 resources
+I, [2023-04-27T11:50:58.649469 #5018]  INFO -- default-102555166: Recipe: cookbook1::default
+I, [2023-04-27T11:50:58.649832 #5018]  INFO -- default-102555166:   * apt_update[update] action periodic (up to date)
+I, [2023-04-27T11:50:58.736299 #5018]  INFO -- default-102555166:   * apt_package[default-jre] action install (up to date)
+I, [2023-04-27T11:50:59.795452 #5018]  INFO -- default-102555166:   * remote_file[/tmp/apache-ignite-2.14.0-bin.zip] action create (up to date)
+I, [2023-04-27T11:50:59.796510 #5018]  INFO -- default-102555166:   * group[ignite] action create (up to date)
+I, [2023-04-27T11:50:59.815347 #5018]  INFO -- default-102555166:   * linux_user[ignite] action create (skipped due to not_if)
+I, [2023-04-27T11:50:59.817379 #5018]  INFO -- default-102555166:   * directory[/opt] action create (up to date)
+I, [2023-04-27T11:50:59.818742 #5018]  INFO -- default-102555166:   * directory[/opt/ignite] action create (up to date)
+I, [2023-04-27T11:50:59.819017 #5018]  INFO -- default-102555166:   * execute[unzip_ignite_distribution] action run (skipped due to not_if)
+I, [2023-04-27T11:50:59.820966 #5018]  INFO -- default-102555166:   * directory[/opt/ignite/apache-ignite-2.14.0-bin/exporter] action create (up to date)
+I, [2023-04-27T11:51:05.030083 #5018]  INFO -- default-102555166:   * remote_file[/opt/ignite/apache-ignite-2.14.0-bin/exporter/jmx_prometheus_javaagent-0.18.0.jar] action create (up to date)
+I, [2023-04-27T11:51:05.038823 #5018]  INFO -- default-102555166:   * template[/opt/ignite/apache-ignite-2.14.0-bin/exporter/ignite.yaml] action create (up to date)
+I, [2023-04-27T11:51:05.046526 #5018]  INFO -- default-102555166:   * template[/etc/systemd/system/ignite.service] action create
+I, [2023-04-27T11:51:05.046741 #5018]  INFO -- default-102555166:     - update content in file /etc/systemd/system/ignite.service from 47bef9 to e0d320
+I, [2023-04-27T11:51:05.046975 #5018]  INFO -- default-102555166:     --- /etc/systemd/system/ignite.service	2023-04-27 10:20:10.468000000 +0000
+I, [2023-04-27T11:51:05.047199 #5018]  INFO -- default-102555166:     +++ /etc/systemd/system/.chef-ignite20230427-144697-128krn8.service	2023-04-27 11:51:09.600000000 +0000
+I, [2023-04-27T11:51:05.047671 #5018]  INFO -- default-102555166:     @@ -9,6 +9,7 @@
+I, [2023-04-27T11:51:05.047830 #5018]  INFO -- default-102555166:      ProtectSystem=full
+I, [2023-04-27T11:51:05.047962 #5018]  INFO -- default-102555166:      Type=simple
+I, [2023-04-27T11:51:05.048143 #5018]  INFO -- default-102555166:      Environment=JVM_OPTS=-javaagent:/opt/ignite/apache-ignite-2.14.0-bin/exporter/jmx_prometheus_javaagent-0.18.0.jar=8090:/opt/ignite/apache-ignite-2.14.0-bin/exporter/ignite.yaml
+I, [2023-04-27T11:51:05.048297 #5018]  INFO -- default-102555166:     +Environment=IGNITE_HOME=/opt/ignite/apache-ignite-2.14.0-bin
+I, [2023-04-27T11:51:05.048441 #5018]  INFO -- default-102555166:      ExecReload=/bin/kill -HUP $MAINPID
+I, [2023-04-27T11:51:05.048576 #5018]  INFO -- default-102555166:      KillMode=mixed
+I, [2023-04-27T11:51:05.048717 #5018]  INFO -- default-102555166:      KillSignal=SIGTERM
+I, [2023-04-27T11:51:05.048935 #5018]  INFO -- default-102555166:   * execute[systemctl-daemon-reload] action run/usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/provider/execute.rb:58: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+I, [2023-04-27T11:51:05.049301 #5018]  INFO -- default-102555166: /usr/share/rubygems-integration/all/gems/chef-15.8.25/lib/chef/mixin/shell_out.rb:58: warning: The called method `shell_out!' is defined here
+I, [2023-04-27T11:51:05.253435 #5018]  INFO -- default-102555166: 
+I, [2023-04-27T11:51:05.253522 #5018]  INFO -- default-102555166:     - execute systemctl daemon-reload
+I, [2023-04-27T11:51:05.253717 #5018]  INFO -- default-102555166:   * execute[systemctl-daemon-reload] action nothing (skipped due to action :nothing)
+I, [2023-04-27T11:51:05.326515 #5018]  INFO -- default-102555166:   * service[ignite.service] action enable (up to date)
+I, [2023-04-27T11:51:05.404418 #5018]  INFO -- default-102555166:   * service[ignite.service] action start
+I, [2023-04-27T11:51:05.404507 #5018]  INFO -- default-102555166:     - start service service[ignite.service]
+I, [2023-04-27T11:51:05.506182 #5018]  INFO -- default-102555166:   * service[ignite.service] action restart
+I, [2023-04-27T11:51:05.506267 #5018]  INFO -- default-102555166:     - restart service service[ignite.service]
+I, [2023-04-27T11:51:05.580652 #5018]  INFO -- default-102555166: 
+I, [2023-04-27T11:51:05.580771 #5018]  INFO -- default-102555166: Running handlers:
+I, [2023-04-27T11:51:05.580925 #5018]  INFO -- default-102555166: Running handlers complete
+I, [2023-04-27T11:51:05.581015 #5018]  INFO -- default-102555166: Cinc Client finished, 4/17 resources updated in 10 seconds
+I, [2023-04-27T11:51:05.595410 #5018]  INFO -- default-102555166: Downloading files from <default-102555166>
+I, [2023-04-27T11:51:05.597076 #5018]  INFO -- default-102555166: Finished converging <default-102555166> (0m19.60s).

@@ -1,0 +1,3 @@
+I, [2023-04-27T11:50:45.108158 #5018]  INFO -- Kitchen: -----> Starting Test Kitchen (v3.5.0)
+I, [2023-04-27T11:50:45.993263 #5018]  INFO -- Kitchen: -----> Converging <default-102555166>...
+I, [2023-04-27T11:51:05.597402 #5018]  INFO -- Kitchen: -----> Test Kitchen is finished. (0m20.49s)

@@ -1,0 +1,138 @@
+I, [2023-04-17T13:24:30.235921 #53087]  INFO -- default-102555128: -----> Converging <default-102555128>...
+W, [2023-04-17T13:24:30.236287 #53087]  WARN -- default-102555128: Running legacy converge for 'Ssh' Driver
+I, [2023-04-17T13:24:30.236517 #53087]  INFO -- default-102555128: Preparing files for transfer
+I, [2023-04-17T13:24:30.236650 #53087]  INFO -- default-102555128: Preparing dna.json
+I, [2023-04-17T13:24:30.236889 #53087]  INFO -- default-102555128: Resolving cookbook dependencies with Berkshelf 8.0.5...
+I, [2023-04-17T13:24:38.378398 #53087]  INFO -- default-102555128: Removing non-cookbook files before transfer
+I, [2023-04-17T13:24:38.379015 #53087]  INFO -- default-102555128: Preparing validation.pem
+I, [2023-04-17T13:24:38.379183 #53087]  INFO -- default-102555128: Preparing client.rb
+I, [2023-04-17T13:24:38.750755 #53087]  INFO -- default-102555128: Transferring files to <default-102555128>
+I, [2023-04-17T13:24:39.657265 #53087]  INFO -- default-102555128: Starting Chef Client, version 14.15.6
+I, [2023-04-17T13:24:41.589491 #53087]  INFO -- default-102555128: resolving cookbooks for run list: ["cookbook1::default"]
+I, [2023-04-17T13:24:41.600889 #53087]  INFO -- default-102555128: Synchronizing Cookbooks:
+I, [2023-04-17T13:24:41.601959 #53087]  INFO -- default-102555128:   - cookbook1 (0.1.1)
+I, [2023-04-17T13:24:41.602167 #53087]  INFO -- default-102555128: Installing Cookbook Gems:
+I, [2023-04-17T13:24:41.603304 #53087]  INFO -- default-102555128: Compiling Cookbooks...
+I, [2023-04-17T13:24:41.606973 #53087]  INFO -- default-102555128: Converging 8 resources
+I, [2023-04-17T13:24:41.607079 #53087]  INFO -- default-102555128: Recipe: cookbook1::default
+I, [2023-04-17T13:24:41.607275 #53087]  INFO -- default-102555128:   * apt_update[update] action periodic (up to date)
+I, [2023-04-17T13:30:12.981096 #53087]  INFO -- default-102555128:   * apt_package[default-jre] action install
+I, [2023-04-17T13:30:12.981347 #53087]  INFO -- default-102555128:     - install version 2:1.11-72 of package default-jre
+I, [2023-04-17T13:30:15.793726 #53087]  INFO -- default-102555128:   * remote_file[/tmp/apache-ignite-2.14.0-bin.zip] action create[2023-04-17T13:29:50+00:00] ERROR: SSL Validation failure connecting to host: dlcdn.apache.org - SSL_connect returned=1 errno=0 state=error: certificate verify failed (certificate has expired)
+I, [2023-04-17T13:30:15.794392 #53087]  INFO -- default-102555128: 
+I, [2023-04-17T13:30:15.794427 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.794770 #53087]  INFO -- default-102555128:     ================================================================================
+I, [2023-04-17T13:30:15.794940 #53087]  INFO -- default-102555128:     Error executing action `create` on resource 'remote_file[/tmp/apache-ignite-2.14.0-bin.zip]'
+I, [2023-04-17T13:30:15.794966 #53087]  INFO -- default-102555128:     ================================================================================
+I, [2023-04-17T13:30:15.794978 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.795159 #53087]  INFO -- default-102555128:     OpenSSL::SSL::SSLError
+I, [2023-04-17T13:30:15.795271 #53087]  INFO -- default-102555128:     ----------------------
+I, [2023-04-17T13:30:15.795436 #53087]  INFO -- default-102555128:     SSL Error connecting to https://dlcdn.apache.org/ignite/2.14.0/apache-ignite-2.14.0-bin.zip - SSL_connect returned=1 errno=0 state=error: certificate verify failed (certificate has expired)
+I, [2023-04-17T13:30:15.795539 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.795746 #53087]  INFO -- default-102555128:     Resource Declaration:
+I, [2023-04-17T13:30:15.795875 #53087]  INFO -- default-102555128:     ---------------------
+I, [2023-04-17T13:30:15.795998 #53087]  INFO -- default-102555128:     # In /tmp/kitchen/cache/cookbooks/cookbook1/recipes/default.rb
+I, [2023-04-17T13:30:15.796106 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.796206 #53087]  INFO -- default-102555128:      14: remote_file '/tmp/apache-ignite-2.14.0-bin.zip' do
+I, [2023-04-17T13:30:15.796321 #53087]  INFO -- default-102555128:      15:   source 'https://dlcdn.apache.org/ignite/2.14.0/apache-ignite-2.14.0-bin.zip'
+I, [2023-04-17T13:30:15.796520 #53087]  INFO -- default-102555128:      16:   mode '0755'
+I, [2023-04-17T13:30:15.796669 #53087]  INFO -- default-102555128:      17:   action :create
+I, [2023-04-17T13:30:15.796905 #53087]  INFO -- default-102555128:      18: end
+I, [2023-04-17T13:30:15.796929 #53087]  INFO -- default-102555128:      19: 
+I, [2023-04-17T13:30:15.797124 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.797227 #53087]  INFO -- default-102555128:     Compiled Resource:
+I, [2023-04-17T13:30:15.797370 #53087]  INFO -- default-102555128:     ------------------
+I, [2023-04-17T13:30:15.797481 #53087]  INFO -- default-102555128:     # Declared in /tmp/kitchen/cache/cookbooks/cookbook1/recipes/default.rb:14:in `from_file'
+I, [2023-04-17T13:30:15.797605 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.797757 #53087]  INFO -- default-102555128:     remote_file("/tmp/apache-ignite-2.14.0-bin.zip") do
+I, [2023-04-17T13:30:15.797858 #53087]  INFO -- default-102555128:       action [:create]
+I, [2023-04-17T13:30:15.797976 #53087]  INFO -- default-102555128:       default_guard_interpreter :default
+I, [2023-04-17T13:30:15.798132 #53087]  INFO -- default-102555128:       source ["https://dlcdn.apache.org/ignite/2.14.0/apache-ignite-2.14.0-bin.zip"]
+I, [2023-04-17T13:30:15.798161 #53087]  INFO -- default-102555128:       declared_type :remote_file
+I, [2023-04-17T13:30:15.798176 #53087]  INFO -- default-102555128:       cookbook_name "cookbook1"
+I, [2023-04-17T13:30:15.798190 #53087]  INFO -- default-102555128:       recipe_name "default"
+I, [2023-04-17T13:30:15.798203 #53087]  INFO -- default-102555128:       mode "0755"
+I, [2023-04-17T13:30:15.798216 #53087]  INFO -- default-102555128:       remote_domain nil
+I, [2023-04-17T13:30:15.798370 #53087]  INFO -- default-102555128:       remote_user nil
+I, [2023-04-17T13:30:15.798390 #53087]  INFO -- default-102555128:       path "/tmp/apache-ignite-2.14.0-bin.zip"
+I, [2023-04-17T13:30:15.798399 #53087]  INFO -- default-102555128:       owner nil
+I, [2023-04-17T13:30:15.798408 #53087]  INFO -- default-102555128:       group nil
+I, [2023-04-17T13:30:15.798415 #53087]  INFO -- default-102555128:       headers {}
+I, [2023-04-17T13:30:15.798424 #53087]  INFO -- default-102555128:       verifications []
+I, [2023-04-17T13:30:15.798432 #53087]  INFO -- default-102555128:     end
+I, [2023-04-17T13:30:15.798560 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.798645 #53087]  INFO -- default-102555128:     System Info:
+I, [2023-04-17T13:30:15.798715 #53087]  INFO -- default-102555128:     ------------
+I, [2023-04-17T13:30:15.798813 #53087]  INFO -- default-102555128:     chef_version=14.15.6
+I, [2023-04-17T13:30:15.798827 #53087]  INFO -- default-102555128:     platform=ubuntu
+I, [2023-04-17T13:30:15.798837 #53087]  INFO -- default-102555128:     platform_version=20.04
+I, [2023-04-17T13:30:15.798896 #53087]  INFO -- default-102555128:     ruby=ruby 2.5.8p224 (2020-03-31 revision 67882) [x86_64-linux]
+I, [2023-04-17T13:30:15.798990 #53087]  INFO -- default-102555128:     program_name=/bin/chef-client
+I, [2023-04-17T13:30:15.799052 #53087]  INFO -- default-102555128:     executable=/opt/chef/bin/chef-client
+I, [2023-04-17T13:30:15.799111 #53087]  INFO -- default-102555128:     
+I, [2023-04-17T13:30:15.799170 #53087]  INFO -- default-102555128: 
+I, [2023-04-17T13:30:15.799182 #53087]  INFO -- default-102555128: Running handlers:
+I, [2023-04-17T13:30:15.799247 #53087]  INFO -- default-102555128: [2023-04-17T13:29:50+00:00] ERROR: Running exception handlers
+I, [2023-04-17T13:30:15.799314 #53087]  INFO -- default-102555128: Running handlers complete
+I, [2023-04-17T13:30:15.799373 #53087]  INFO -- default-102555128: [2023-04-17T13:29:50+00:00] ERROR: Exception handlers complete
+I, [2023-04-17T13:30:15.799433 #53087]  INFO -- default-102555128: Chef Client failed. 1 resources updated in 05 minutes 36 seconds
+I, [2023-04-17T13:30:15.799502 #53087]  INFO -- default-102555128: [2023-04-17T13:29:50+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2023-04-17T13:30:15.799564 #53087]  INFO -- default-102555128: [2023-04-17T13:29:50+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2023-04-17T13:30:15.799644 #53087]  INFO -- default-102555128: [2023-04-17T13:29:50+00:00] FATAL: OpenSSL::SSL::SSLError: remote_file[/tmp/apache-ignite-2.14.0-bin.zip] (cookbook1::default line 14) had an error: OpenSSL::SSL::SSLError: SSL Error connecting to https://dlcdn.apache.org/ignite/2.14.0/apache-ignite-2.14.0-bin.zip - SSL_connect returned=1 errno=0 state=error: certificate verify failed (certificate has expired)
+E, [2023-04-17T13:30:15.818291 #53087] ERROR -- default-102555128: Converge failed on instance <default-102555128>.
+E, [2023-04-17T13:30:15.818402 #53087] ERROR -- default-102555128: ------Exception-------
+E, [2023-04-17T13:30:15.818415 #53087] ERROR -- default-102555128: Class: Kitchen::ActionFailed
+E, [2023-04-17T13:30:15.818422 #53087] ERROR -- default-102555128: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2023-04-17T13:30:15.818431 #53087] ERROR -- default-102555128: ----------------------
+E, [2023-04-17T13:30:15.818438 #53087] ERROR -- default-102555128: ------Backtrace-------
+E, [2023-04-17T13:30:15.818445 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T13:30:15.818453 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T13:30:15.818460 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T13:30:15.818471 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T13:30:15.818478 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T13:30:15.818486 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T13:30:15.818493 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T13:30:15.818500 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T13:30:15.818508 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T13:30:15.818515 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T13:30:15.818522 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T13:30:15.818533 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T13:30:15.818541 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T13:30:15.818548 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T13:30:15.818561 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T13:30:15.818572 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T13:30:15.818580 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T13:30:15.818587 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T13:30:15.818594 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T13:30:15.818601 #53087] ERROR -- default-102555128: ----End Backtrace-----
+E, [2023-04-17T13:30:15.818679 #53087] ERROR -- default-102555128: ---Nested Exception---
+E, [2023-04-17T13:30:15.818686 #53087] ERROR -- default-102555128: Class: Kitchen::Transport::SshFailed
+E, [2023-04-17T13:30:15.818693 #53087] ERROR -- default-102555128: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2023-04-17T13:30:15.818700 #53087] ERROR -- default-102555128: ----------------------
+E, [2023-04-17T13:30:15.818706 #53087] ERROR -- default-102555128: ------Backtrace-------
+E, [2023-04-17T13:30:15.818713 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T13:30:15.818719 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T13:30:15.818727 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T13:30:15.818733 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T13:30:15.818740 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T13:30:15.818746 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T13:30:15.818753 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T13:30:15.818760 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T13:30:15.818766 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T13:30:15.818773 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T13:30:15.818780 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T13:30:15.818786 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T13:30:15.818796 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T13:30:15.818803 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T13:30:15.818809 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T13:30:15.818816 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T13:30:15.818822 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T13:30:15.818829 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T13:30:15.818836 #53087] ERROR -- default-102555128: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T13:30:15.818842 #53087] ERROR -- default-102555128: ----End Backtrace-----

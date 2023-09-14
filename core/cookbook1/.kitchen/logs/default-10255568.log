@@ -1,0 +1,76 @@
+I, [2023-04-17T12:31:23.534177 #52339]  INFO -- default-10255568: -----> Converging <default-10255568>...
+W, [2023-04-17T12:31:23.534455 #52339]  WARN -- default-10255568: Running legacy converge for 'Ssh' Driver
+I, [2023-04-17T12:31:23.534881 #52339]  INFO -- default-10255568: Preparing files for transfer
+I, [2023-04-17T12:31:23.534979 #52339]  INFO -- default-10255568: Preparing dna.json
+I, [2023-04-17T12:31:23.535191 #52339]  INFO -- default-10255568: Resolving cookbook dependencies with Berkshelf 8.0.5...
+I, [2023-04-17T12:31:45.939625 #52339]  INFO -- default-10255568: Removing non-cookbook files before transfer
+I, [2023-04-17T12:31:45.940677 #52339]  INFO -- default-10255568: Preparing validation.pem
+I, [2023-04-17T12:31:45.940865 #52339]  INFO -- default-10255568: Preparing client.rb
+I, [2023-04-17T12:31:46.320658 #52339]  INFO -- default-10255568: bash: sh: command not found
+E, [2023-04-17T12:31:46.322044 #52339] ERROR -- default-10255568: Converge failed on instance <default-10255568>.
+E, [2023-04-17T12:31:46.322152 #52339] ERROR -- default-10255568: ------Exception-------
+E, [2023-04-17T12:31:46.322164 #52339] ERROR -- default-10255568: Class: Kitchen::ActionFailed
+E, [2023-04-17T12:31:46.322173 #52339] ERROR -- default-10255568: Message: SSH exited (127) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo_rm="sudo -E rm"
+dirs="/tmp/kitchen/clients /tmp/kitchen/cookbooks /tmp/kitchen/data /tmp/kitchen/data_bags /tmp/kitchen/encrypted_data_bag_secret /tmp/kitchen/environments /tmp/kitchen/roles"
+root_path="/tmp/kitchen"
+
+$sudo_rm -rf $dirs
+mkdir -p $root_path
+']
+E, [2023-04-17T12:31:46.322183 #52339] ERROR -- default-10255568: ----------------------
+E, [2023-04-17T12:31:46.322190 #52339] ERROR -- default-10255568: ------Backtrace-------
+E, [2023-04-17T12:31:46.322198 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T12:31:46.322206 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T12:31:46.322213 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T12:31:46.322221 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T12:31:46.322229 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T12:31:46.322237 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T12:31:46.322244 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T12:31:46.322252 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T12:31:46.322260 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T12:31:46.322268 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T12:31:46.322276 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T12:31:46.322284 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T12:31:46.322291 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T12:31:46.322369 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T12:31:46.322377 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T12:31:46.322384 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T12:31:46.322392 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T12:31:46.322400 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T12:31:46.322408 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T12:31:46.322416 #52339] ERROR -- default-10255568: ----End Backtrace-----
+E, [2023-04-17T12:31:46.322423 #52339] ERROR -- default-10255568: ---Nested Exception---
+E, [2023-04-17T12:31:46.322430 #52339] ERROR -- default-10255568: Class: Kitchen::Transport::SshFailed
+E, [2023-04-17T12:31:46.322455 #52339] ERROR -- default-10255568: Message: SSH exited (127) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo_rm="sudo -E rm"
+dirs="/tmp/kitchen/clients /tmp/kitchen/cookbooks /tmp/kitchen/data /tmp/kitchen/data_bags /tmp/kitchen/encrypted_data_bag_secret /tmp/kitchen/environments /tmp/kitchen/roles"
+root_path="/tmp/kitchen"
+
+$sudo_rm -rf $dirs
+mkdir -p $root_path
+']
+E, [2023-04-17T12:31:46.322468 #52339] ERROR -- default-10255568: ----------------------
+E, [2023-04-17T12:31:46.322477 #52339] ERROR -- default-10255568: ------Backtrace-------
+E, [2023-04-17T12:31:46.322486 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:91:in `rescue in converge'
+E, [2023-04-17T12:31:46.322504 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/driver/ssh_base.rb:90:in `converge'
+E, [2023-04-17T12:31:46.322513 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:630:in `legacy_ssh_base_converge'
+E, [2023-04-17T12:31:46.322521 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:416:in `block in converge_action'
+E, [2023-04-17T12:31:46.322528 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:563:in `synchronize_or_call'
+E, [2023-04-17T12:31:46.322536 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:524:in `block in action'
+E, [2023-04-17T12:31:46.322543 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/3.1.0/benchmark.rb:296:in `measure'
+E, [2023-04-17T12:31:46.322551 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:523:in `action'
+E, [2023-04-17T12:31:46.322558 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:414:in `converge_action'
+E, [2023-04-17T12:31:46.322566 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:392:in `block (2 levels) in transition_to'
+E, [2023-04-17T12:31:46.322573 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/lifecycle_hooks.rb:47:in `run_with_hooks'
+E, [2023-04-17T12:31:46.322585 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:391:in `block in transition_to'
+E, [2023-04-17T12:31:46.322592 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `each'
+E, [2023-04-17T12:31:46.322600 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:390:in `transition_to'
+E, [2023-04-17T12:31:46.322607 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/instance.rb:139:in `converge'
+E, [2023-04-17T12:31:46.322614 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `public_send'
+E, [2023-04-17T12:31:46.322622 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:195:in `run_action_in_thread'
+E, [2023-04-17T12:31:46.322629 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/test-kitchen-3.5.0/lib/kitchen/command.rb:166:in `block (2 levels) in run_action'
+E, [2023-04-17T12:31:46.322636 #52339] ERROR -- default-10255568: /opt/chef-workstation/embedded/lib/ruby/gems/3.1.0/gems/logging-2.3.1/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2023-04-17T12:31:46.322644 #52339] ERROR -- default-10255568: ----End Backtrace-----
